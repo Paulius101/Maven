@@ -3,6 +3,7 @@ package org.example;
 import com.google.common.collect.Range;
 import com.google.common.primitives.Ints;
 
+import java.util.Arrays;
 import java.util.Collection;
 
 
@@ -26,7 +27,7 @@ public class Main {
         System.out.println("Max number: " + findMax(intArray));
         System.out.println("Min number: " + findMin(intArray));
         System.out.println("Int array contains: " + intArrayContains(intArray, 11));
-        System.out.println(convertArray(intArray));
+        System.out.println(Arrays.toString(convertArray(intArray)));
 
     }
 
@@ -46,8 +47,11 @@ public class Main {
         return Ints.contains(intArray, targetNumber);
     }
 
+
     private static Object[] convertArray(int[] intArray) {
       Collection collection =  Ints.asList(intArray);
       return collection.toArray();
     }
+
+
 }
